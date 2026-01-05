@@ -1,163 +1,209 @@
-# site is under working 
-Tours and travels
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shree Sashti Tours & Travels</title>
+  <meta name="description" content="Shree Sashti Tours & Travels – Reliable taxi, outstation, pilgrimage and airport services in Tamil Nadu." />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fa;
-      color: #333;
-    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; background:#f4f6f9; color:#333; }
+
     header {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      padding: 20px 10px;
-      text-align: center;
+      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:#fff; padding:30px 15px; text-align:center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-    }
-    header p {
-      margin: 8px 0 0;
-      font-size: 1.1rem;
-    }
+    header h1 { margin:0; font-size:2.4rem; }
+    header p { margin-top:10px; font-size:1.1rem; }
+
     nav {
-      background: #203a43;
-      padding: 10px;
-      text-align: center;
+      background:#203a43; padding:12px; text-align:center;
+      position:sticky; top:0; z-index:1000;
     }
     nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
+      color:#fff; margin:0 14px; text-decoration:none; font-weight:bold;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-    .section h2 {
-      color: #203a43;
-      margin-bottom: 15px;
-    }
+    nav a:hover { text-decoration:underline; }
+
+    .container { max-width:1200px; margin:auto; padding:25px; }
+    .section { margin-bottom:60px; }
+    .section h2 { color:#203a43; margin-bottom:20px; text-align:center; }
+
     .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:22px;
     }
     .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      background:#fff; padding:22px; border-radius:14px;
+      box-shadow:0 6px 14px rgba(0,0,0,0.08);
     }
-    .card h3 {
-      margin-top: 0;
-      color: #2c5364;
+    .card h3 { margin-top:0; color:#2c5364; }
+
+    .highlight {
+      background:#e8f0f5; padding:20px; border-left:6px solid #2c5364;
+      border-radius:8px;
     }
-    .contact {
-      background: #203a43;
-      color: white;
-      padding: 30px 20px;
-      border-radius: 10px;
+
+    .pricing-table {
+      width:100%; border-collapse:collapse; background:#fff;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      border-radius:10px; overflow:hidden;
     }
-    .contact p {
-      font-size: 1.1rem;
+    .pricing-table th, .pricing-table td {
+      padding:14px; text-align:center; border-bottom:1px solid #eee;
     }
+    .pricing-table th { background:#203a43; color:#fff; }
+
+    .gallery {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px;
+    }
+    .gallery div {
+      background:#dfe6ec; height:160px; border-radius:12px;
+      display:flex; align-items:center; justify-content:center;
+      color:#555; font-weight:bold;
+    }
+
+    .testimonial { font-style:italic; }
+
+    .contact-box {
+      background:#203a43; color:#fff; padding:30px;
+      border-radius:14px; text-align:center;
+    }
+
+    form {
+      max-width:600px; margin:0 auto; background:#fff; padding:25px;
+      border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+    form input, form textarea, form button {
+      width:100%; padding:12px; margin-bottom:12px;
+      border-radius:8px; border:1px solid #ccc; font-size:1rem;
+    }
+    form button {
+      background:#2c5364; color:#fff; border:none; cursor:pointer;
+    }
+    form button:hover { background:#203a43; }
+
     footer {
-      text-align: center;
-      padding: 15px;
-      background: #0f2027;
-      color: #ccc;
+      text-align:center; padding:18px; background:#0f2027; color:#ccc;
     }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.7rem;
-      }
+
+    .whatsapp {
+      position:fixed; bottom:20px; right:20px;
+      background:#25D366; color:white; padding:14px 20px;
+      border-radius:50px; text-decoration:none; font-weight:bold;
+      box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width:600px) {
+      header h1 { font-size:1.9rem; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Shree Sashti Tours & Travels</h1>
-    <p>Comfortable • Reliable • Affordable Travel Services</p>
-  </header>
+<header>
+  <h1>Shree Sashti Tours & Travels</h1>
+  <p>Your Trusted Partner for Safe & Comfortable Journeys</p>
+</header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#booking">Booking</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <div class="container">
+<div class="container">
 
-    <section id="about" class="section">
-      <h2>About Us</h2>
-      <p>
-        Shree Sashti Tours & Travels provides safe, comfortable, and affordable travel
-        services for families, pilgrims, and corporate customers. We focus on customer
-        satisfaction and on-time service.
-      </p>
-    </section>
-
-    <section id="services" class="section">
-      <h2>Our Services</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Outstation Trips</h3>
-          <p>Comfortable outstation travel with experienced drivers.</p>
-        </div>
-        <div class="card">
-          <h3>Pilgrimage Tours</h3>
-          <p>Special trips to temples like Palani, Kolli Hills, and more.</p>
-        </div>
-        <div class="card">
-          <h3>Local & One-Day Trips</h3>
-          <p>Affordable one-day packages and local sightseeing.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing" class="section">
-      <h2>Vehicle Pricing</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Ertiga (AC, 7-Seater)</h3>
-          <p><strong>Below 250 km:</strong> ₹3000 per day</p>
-          <p><strong>Above 250 km:</strong> ₹15 per km</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact Us</h2>
-      <div class="contact">
-        <p><strong>Phone:</strong> 9566749964, 8870454628</p>
-        <p><strong>Service Area:</strong> Tamil Nadu & Nearby States</p>
-      </div>
-    </section>
-
+<section id="about" class="section">
+  <h2>About Us</h2>
+  <div class="highlight">
+    Shree Sashti Tours & Travels offers professional taxi and travel services across
+    Tamil Nadu. We are known for punctuality, clean vehicles, experienced drivers,
+    and customer-friendly pricing.
   </div>
+</section>
 
-  <footer>
-    <p>© 2026 Shree Sashti Tours & Travels. All Rights Reserved.</p>
-  </footer>
+<section id="services" class="section">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card"><h3>Outstation Travel</h3><p>Comfortable long-distance journeys.</p></div>
+    <div class="card"><h3>Pilgrimage Tours</h3><p>Palani, Kolli Hills, Tiruvannamalai & more.</p></div>
+    <div class="card"><h3>Airport Pickup & Drop</h3><p>On-time service guaranteed.</p></div>
+    <div class="card"><h3>One-Day Trips</h3><p>Perfect for family outings.</p></div>
+  </div>
+</section>
+
+<section id="pricing" class="section">
+  <h2>Pricing</h2>
+  <table class="pricing-table">
+    <tr><th>Vehicle</th><th>Below 250 km</th><th>Above 250 km</th></tr>
+    <tr><td>Ertiga (AC, 7-Seater)</td><td>₹3000 / Day</td><td>₹15 / km</td></tr>
+  </table>
+</section>
+
+<section id="gallery" class="section">
+  <h2>Trip Gallery</h2>
+  <div class="gallery">
+    <div>Trip Photo</div><div>Trip Photo</div><div>Trip Photo</div><div>Trip Photo</div>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <h2>Customer Reviews</h2>
+  <div class="cards">
+    <div class="card testimonial">"Clean car and polite driver. Excellent service."</div>
+    <div class="card testimonial">"Very smooth journey to Palani."</div>
+    <div class="card testimonial">"Affordable and reliable travels."</div>
+  </div>
+</section>
+
+<section id="booking" class="section">
+  <h2>Booking Request</h2>
+  <form onsubmit="sendWhatsApp(event)">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="tel" id="phone" placeholder="Phone Number" required />
+    <input type="text" id="pickup" placeholder="Pickup Location" required />
+    <input type="text" id="drop" placeholder="Drop Location" required />
+    <textarea id="details" placeholder="Travel Date & Details"></textarea>
+    <button type="submit">Send via WhatsApp</button>
+  </form>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <div class="contact-box">
+    <p><strong>📞 Phone:</strong> 9566749964, 8870454628</p>
+    <p><strong>📍 Service Area:</strong> Tamil Nadu & Nearby States</p>
+    <p><strong>🕒 Available:</strong> 24/7</p>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  © 2026 Shree Sashti Tours & Travels. All Rights Reserved.
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919566749964" target="_blank">WhatsApp</a>
+
+<script>
+  function sendWhatsApp(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const pickup = document.getElementById('pickup').value;
+    const drop = document.getElementById('drop').value;
+    const details = document.getElementById('details').value;
+
+    const message = `Booking Request:%0AName: ${name}%0APhone: ${phone}%0APickup: ${pickup}%0ADrop: ${drop}%0ADetails: ${details}`;
+    window.open(`https://wa.me/919566749964?text=${message}`, '_blank');
+  }
+</script>
 
 </body>
 </html>
