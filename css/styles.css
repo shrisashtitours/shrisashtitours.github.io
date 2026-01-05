@@ -1,0 +1,97 @@
+:root{
+  /* Light theme variables */
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --accent: #0077cc;
+  --text: #0b1a2b;
+  --muted: #6b7280;
+  --card-shadow: rgba(11,26,43,0.06);
+  --radius: 10px;
+  --logo-fill: #0077cc;
+  transition: background-color .25s ease, color .25s ease;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Dark theme overrides */
+:root[data-theme="dark"]{
+  --bg: #071022;
+  --surface: #071826;
+  --accent: #4fb3ff;
+  --text: #e6eef8;
+  --muted: #9fb6cf;
+  --card-shadow: rgba(0,0,0,0.6);
+  --logo-fill: #4fb3ff;
+}
+
+/* Global */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--text);line-height:1.5}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+
+/* Header */
+.site-header{background:var(--surface);box-shadow:0 1px 6px var(--card-shadow);position:sticky;top:0;z-index:30}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1rem;gap:1rem}
+.brand{display:flex;align-items:center;gap:.6rem;color:var(--text);text-decoration:none;font-weight:700}
+.logo{height:48px;width:auto;border-radius:6px}
+.brand-text{display:inline-block;font-size:1.05rem}
+.site-nav{display:flex;gap:1rem}
+.site-nav a{color:var(--text);text-decoration:none;font-weight:500}
+.nav-toggle{display:none;background:none;border:0;font-size:1.35rem}
+.header-actions{display:flex;align-items:center;gap:.5rem}
+
+/* Theme toggle */
+.theme-toggle{background:transparent;border:0;padding:.25rem;border-radius:8px;cursor:pointer;color:var(--text);display:inline-flex;align-items:center;justify-content:center}
+.theme-toggle:focus{outline:2px solid color-mix(in srgb, var(--accent) 40%, transparent);outline-offset:2px}
+
+/* Hero */
+.hero{background:linear-gradient(180deg, rgba(0,119,204,0.08), rgba(255,255,255,0.02)), url('https://source.unsplash.com/1200x800/?travel,landscape') center/cover no-repeat;padding:4rem 0;color:var(--text)}
+:root[data-theme="dark"] .hero{background:linear-gradient(180deg, rgba(7,24,34,0.6), rgba(7,24,34,0.6)), url('https://source.unsplash.com/1200x800/?travel,landscape') center/cover no-repeat;color:var(--text)}
+.hero-inner{background:rgba(255,255,255,0.06);backdrop-filter: blur(6px);padding:2rem;border-radius:12px}
+.hero h1{margin:0 0 .5rem;font-size:2rem}
+.hero p{margin:0 0 1rem;color:var(--muted)}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:8px;text-decoration:none}
+
+/* Sections */
+.section{padding:3rem 0}
+.section.alt{background:var(--surface);border-top:1px solid rgba(11,26,43,0.04)}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+.card{background:var(--surface);border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 18px var(--card-shadow);display:flex;flex-direction:column}
+.card img{width:100%;height:180px;object-fit:cover}
+.card-body{padding:1rem;flex:1;display:flex;flex-direction:column}
+.card h3{margin:0 0 .5rem}
+.card p{margin:0 0 .5rem;color:var(--muted);flex:1}
+.card-meta{font-size:.9rem;color:var(--muted);margin-bottom:.75rem}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:.5rem .75rem;border-radius:8px;text-decoration:none}
+
+/* Testimonials */
+.testimonials{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+blockquote{background:var(--surface);padding:1rem;border-radius:10px;margin:0;box-shadow:0 4px 12px var(--card-shadow);color:var(--text)}
+
+/* Contact form */
+.contact-form{display:grid;gap:.5rem;max-width:600px}
+.contact-form label{display:flex;flex-direction:column;font-size:.95rem}
+.contact-form input,.contact-form textarea{padding:.6rem;border:1px solid rgba(11,26,43,0.08);border-radius:8px;background:transparent;color:var(--text)}
+
+/* Footer */
+.site-footer{padding:1rem 0;text-align:center;color:var(--muted);font-size:.9rem;border-top:1px solid rgba(11,26,43,0.04);background:var(--surface);margin-top:2rem}
+
+/* Responsive */
+@media (max-width:900px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .testimonials{grid-template-columns:1fr}
+}
+@media (max-width:680px){
+  .cards{grid-template-columns:1fr}
+  .header-inner{gap:.5rem}
+  .nav-toggle{display:inline-block}
+  .site-nav{position:absolute;right:1rem;top:62px;background:var(--surface);padding:.75rem;border-radius:8px;box-shadow:0 6px 20px var(--card-shadow);flex-direction:column;display:none}
+  .site-nav.open{display:flex}
+  .hero{padding:2rem 0}
+  .hero h1{font-size:1.5rem}
+}
+
+/* small transitions */
+a, .btn, .theme-toggle, .nav-toggle {transition:all .18s ease}

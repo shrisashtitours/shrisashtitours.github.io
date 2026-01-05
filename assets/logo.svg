@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Editable SVG logo:
+  - Change the text "Shrisash Ti Tours" inside <text> to update the name.
+  - Change the fill on the circle/path to adjust the accent color.
+  - This file is simple and safe to edit in any text editor or an SVG editor.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="64" viewBox="0 0 240 64" role="img" aria-label="Shrisash Ti Tours logo">
+  <title>Shrisash Ti Tours</title>
+  <defs>
+    <style>
+      .brand-text { font: 600 18px/1.1 "Segoe UI", Roboto, Arial; fill: #0b1a2b; }
+      .accent { fill: #0077cc; }
+    </style>
+  </defs>
+
+  <!-- simple icon: stylized paper-plane within circle -->
+  <g transform="translate(8,8)">
+    <circle cx="24" cy="24" r="24" class="accent" />
+    <path d="M10 23 L30 16 L17 29 L21 34 L14 31 Z" fill="#fff" transform="translate(-1,-1)"/>
+  </g>
+
+  <!-- brand text (easy to edit) -->
+  <text x="72" y="40" class="brand-text">Shrisash Ti Tours</text>
+</svg>
