@@ -205,5 +205,30 @@
   }
 </script>
 
+<!-- Theme toggle button -->
+<button id="theme-toggle" style="position:fixed;top:1em;right:1em;z-index:9999;background:var(--surface);color:var(--text);border:1px solid var(--accent);padding:.5em 1em;border-radius:8px;cursor:pointer;box-shadow:0 2px 8px var(--card-shadow);">
+  Toggle Theme
+</button>
+<script>
+(function(){
+  // On load, apply saved or preferred theme
+  const root = document.documentElement;
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if(saved === 'dark' || (!saved && prefersDark)) root.setAttribute('data-theme','dark');
+  else root.setAttribute('data-theme','light');
+
+  // Toggle logic
+  const btn = document.getElementById('theme-toggle');
+  function toggleTheme() {
+    let cur = root.getAttribute('data-theme');
+    let next = (cur === 'dark') ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  }
+  btn.addEventListener('click', toggleTheme);
+})();
+</script>
+
 </body>
 </html>
