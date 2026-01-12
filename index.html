@@ -578,6 +578,54 @@
       color: #ff6b35;
     }
 
+    /* Social Links */
+    .social-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 35px;
+      flex-wrap: wrap;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 35px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .social-icon {
+      font-size: 1.3rem;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+      border-color: #25D366;
+    }
+
+    .whatsapp-btn:hover {
+      background: #128C7E;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    }
+
+    .instagram-btn {
+      background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+      color: white;
+    }
+
+    .instagram-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(253, 29, 29, 0.4);
+    }
+
     /* Form */
     form {
       max-width: 600px;
@@ -980,6 +1028,16 @@
     <p><strong>📞 Phone:</strong> 9566749964, 8870454628</p>
     <p><strong>📍 Service Area:</strong> Tamil Nadu & Nearby States</p>
     <p><strong>🕒 Available:</strong> 24/7</p>
+    <div class="social-links">
+      <a href="https://wa.me/919566749964" target="_blank" class="social-btn whatsapp-btn">
+        <span class="social-icon">💬</span>
+        WhatsApp
+      </a>
+      <a href="https://www.instagram.com/sashti_travels_tn88/" target="_blank" class="social-btn instagram-btn">
+        <span class="social-icon">📷</span>
+        Instagram
+      </a>
+    </div>
   </div>
 </section>
 
